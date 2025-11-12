@@ -20,4 +20,5 @@ class Ticket(Base):
     updated_at = Column(TIMESTAMP, server_default=text("NOW()"))
     resolved_at = Column(TIMESTAMP)
     source_channel = Column(String(100))
-    embedding_vector = Column(String) 
+    embedding_vector = Column(String)
+    message_id = Column(String, unique=True, index=True, nullable=True) 
